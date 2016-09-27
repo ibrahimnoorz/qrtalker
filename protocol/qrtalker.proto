@@ -1,0 +1,18 @@
+syntax = "proto3";
+package Transport;
+
+message QRRequest {
+    int64 id = 1;
+    string type = 2;
+    string authtoken = 3;
+    int32 datalen = 4;
+    string data = 5;
+}
+
+message QRResponse {
+    int64 id = 1;
+    string type = 2;
+    string err = 3;
+    int32 datalen = 4;
+    bytes data = 5;
+}
